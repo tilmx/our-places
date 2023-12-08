@@ -5,14 +5,7 @@ import { Card } from '@/components/card'
 export default function Home() {
   return (
     <main className={styles.main}>
-      <CardList>
-        <Card
-          title='Möwe Sturzflug'
-        />
-        <Card
-          title='Kleine Konditorei'
-        />
-      </CardList>
+      <CardList />
     </main>
   )
 }

@@ -1,14 +1,19 @@
 import { FunctionComponent, ReactNode } from 'react'
 import styles from './card-list.module.scss'
+import { Card } from './card'
+import { PlaceType } from '@/types'
 
-interface CardListProps {
-    children?: ReactNode;
-}
-
-export const CardList: FunctionComponent<CardListProps> = props => {
+export const CardList: FunctionComponent = () => {
     return (
         <div className={styles.cardList}>
-            {props.children}
+            <Card
+                title='Möwe Sturzflug'
+                type={PlaceType.Bar}
+            />
+            <Card
+                title='Kleine Konditorei'
+                type={PlaceType.Cafe}
+            />
         </div>
     )
 }
