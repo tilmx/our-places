@@ -3,4 +3,8 @@
     padding: var(--size-l);
     border-radius: var(--size-xxl);
     color: var(--color-blue);
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-xxl);
+    align-items: flex-start;
 }

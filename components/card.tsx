@@ -11,7 +11,7 @@ export const Card: FunctionComponent<CardProps> = props => {
     return (
         <div className={styles.card}>
             <Tag label='Bar' />
-            <Text size="large"> {props.title}</Text>
+            <Text large accent>{props.title}</Text>
         </div>
     )
 }

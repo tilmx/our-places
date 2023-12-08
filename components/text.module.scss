@@ -1,5 +1,14 @@
 .text {
     margin: 0;
-    font-size: 84px;
     line-height: 1;
+    font-family: var(--font-geist-sans);
+    font-size: 48px;
+
+    &.large {
+        font-size: 84px;
+    }
+
+    &.accent {
+        font-family: var(--font-accent);
+    }
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
+import { GeistSans } from "geist/font/sans";
 import './globals.scss'
 import { siteDescription, siteTitle } from '@/data/site'
 
@@ -8,8 +9,7 @@ export const metadata: Metadata = {
   description: siteDescription,
 }
 
-const clashDisplayFont = localFont({ src: '../public/assets/fonts/clash-display-bold.woff2' })
-
+const clashDisplayFont = localFont({ src: '../public/assets/fonts/clash-display-bold.woff2', variable: '--font-accent' })
 
 export default function RootLayout({
   children,
@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={clashDisplayFont.className}>
+      <body className={`${clashDisplayFont.variable} ${GeistSans.variable}`}>
         {children}
       </body>
     </html>

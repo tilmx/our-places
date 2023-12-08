@@ -3,8 +3,12 @@
     color: var(--color-background);
     border-radius: var(--size-xl);
     display: inline-flex;
+    padding: var(--size-s) var(--size-l);
+    gap: var(--size-xs);
 
     svg {
         display: block;
+        width: var(--size-xl);
+        height: var(--size-xl);
     }
 }
