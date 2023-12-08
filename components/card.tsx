@@ -1,5 +1,5 @@
 import { FunctionComponent } from 'react'
-import { Text } from './text';
+import { Text, TextSize } from './text';
 import styles from './card.module.scss'
 import { Tag } from './tag';
 import { PlaceType } from '@/types';
@@ -14,7 +14,7 @@ export const Card: FunctionComponent<CardProps> = props => {
     return (
         <div className={styles.card}>
             <Tag icon={getPlaceIcon(props.type)} label={getPlaceLabel(props.type)} />
-            <Text large accent>{props.title}</Text>
+            <Text size={TextSize.Large} accent>{props.title}</Text>
         </div>
     )
 }
