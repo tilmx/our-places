@@ -1,0 +1,10 @@
+.tag {
+    background: var(--color-blue);
+    color: var(--color-background);
+    border-radius: var(--size-xl);
+    display: inline-flex;
+
+    svg {
+        display: block;
+    }
+}

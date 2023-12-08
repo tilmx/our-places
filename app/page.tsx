@@ -1,13 +1,18 @@
-import { siteTitle } from '@/data/site'
-import styles from './page.module.css'
-import { MapPinnedIcon } from 'lucide-react'
+import { CardList } from '@/components/card-list'
+import styles from './page.module.scss'
+import { Card } from '@/components/card'
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <MapPinnedIcon />
-      <h1>Our Places</h1>
-      <p>Hamburg</p>
+      <CardList>
+        <Card
+          title='Möwe Sturzflug'
+        />
+        <Card
+          title='Kleine Konditorei'
+        />
+      </CardList>
     </main>
   )
 }

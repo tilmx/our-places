@@ -1,14 +1,15 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
+import localFont from 'next/font/local'
+import './globals.scss'
 import { siteDescription, siteTitle } from '@/data/site'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: siteTitle,
   description: siteDescription,
 }
+
+const clashDisplayFont = localFont({ src: '../public/assets/fonts/clash-display-bold.woff2' })
+
 
 export default function RootLayout({
   children,
@@ -17,7 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={clashDisplayFont.className}>
+        {children}
+      </body>
     </html>
   )
 }

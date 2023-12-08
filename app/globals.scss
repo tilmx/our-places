@@ -1,0 +1,27 @@
+:root {
+    --color-background: #C3DEFC;
+    --color-text: #000;
+    --color-blue: #245BF6;
+
+    --size-xxxs: 4px;
+    --size-xxs: 8px;
+    --size-xs: 12px;
+    --size-s: 16px;
+    --size-m: 24px;
+    --size-l: 36px;
+    --size-xl: 48px;
+    --size-xxl: 72px;
+    --size-xxxl: 96px;
+    --size-xxxxl: 168px;
+    --size-xxxxxl: 256px;
+}
+
+html,
+body {
+    margin: 0;
+}
+
+body {
+    background: var(--color-background);
+    color: var(--color-text);
+}

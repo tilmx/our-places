@@ -1,0 +1,22 @@
+.main {
+    margin: var(--size-xxxxl) var(--size-l);
+    max-width: 1280px;
+}
+
+.main svg {
+    display: block;
+    margin: 0 auto;
+}
+
+.main h1 {
+    font-size: 36px;
+    font-weight: unset;
+    text-align: center;
+    margin-top: var(--size-l);
+    margin-bottom: var(--size-xxs);
+}
+
+.main p {
+    text-align: center;
+    margin: 0;
+}
