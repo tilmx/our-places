@@ -6,23 +6,23 @@ import { siteDescription, siteTitle } from '@/data/site'
 import { Footer } from '@/components/footer';
 
 export const metadata: Metadata = {
-  title: siteTitle,
-  description: siteDescription,
+    title: siteTitle,
+    description: siteDescription,
 }
 
 const clashDisplayFont = localFont({ src: '../public/assets/fonts/clash-display-bold.woff2', variable: '--font-accent' })
 
 export default function RootLayout({
-  children,
+    children,
 }: {
-  children: React.ReactNode
+    children: React.ReactNode
 }) {
-  return (
-    <html lang="en">
-      <body className={`${clashDisplayFont.variable} ${GeistSans.variable}`}>
-        {children}
-        <Footer />
-      </body>
-    </html>
-  )
+    return (
+        <html lang="en">
+            <body className={`${clashDisplayFont.variable} ${GeistSans.variable}`}>
+                {children}
+                <Footer />
+            </body>
+        </html>
+    )
 }
