@@ -31,8 +31,18 @@ jobs:
       - name: Install Project Dependencies
         run: npm install
 
+      - name: Fetch Content
+        run: npm run fetch-content
+        env:
+          AIRTABLE_TOKEN: ${{ secrets.AIRTABLE_TOKEN }}
+          AIRTABLE_BASE: ${{ secrets.AIRTABLE_BASE }}
+
       - name: Build
         run: npm run build
+        env:
+          NEXT_PUBLIC_SITESNOTICE_ADDRESS: ${{ vars.NEXT_PUBLIC_SITESNOTICE_ADDRESS }}
+          NEXT_PUBLIC_SITESNOTICE_EMAIL: ${{ vars.NEXT_PUBLIC_SITESNOTICE_EMAIL }}
+          NEXT_PUBLIC_SITESNOTICE_PHONE: ${{ vars.NEXT_PUBLIC_SITESNOTICE_PHONE }}
 
       - name: Deploy via SCP
         uses: appleboy/scp-action@v0.1.4
