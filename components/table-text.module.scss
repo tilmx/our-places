@@ -1,0 +1,21 @@
+@import '@/app/breakpoints';
+
+.table {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--size-l);
+    border-top: var(--size-xxxs) solid var(--color-text);
+    padding-top: var(--size-xl);
+    margin-top: var(--size-xl);
+
+    @media (max-width: $viewport-tablet) {
+        grid-template-columns: 1fr;
+    }
+
+    .content {
+        opacity: .6;
+        display: flex;
+        flex-direction: column;
+        gap: var(--size-s);
+    }
+}

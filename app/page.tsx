@@ -1,11 +1,13 @@
 import { PlacesList } from '@/components/places-list'
 import styles from './page.module.scss'
-import { Card } from '@/components/card'
+import { Wrapper } from '@/components/wrapper'
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <PlacesList />
+      <Wrapper>
+        <PlacesList />
+      </Wrapper>
     </main>
   )
 }

@@ -1,0 +1,10 @@
+.footer {
+    display: flex;
+    gap: var(--size-m);
+
+    a {
+        color: unset;
+        text-decoration-thickness: 4px;
+        text-underline-offset: 4px;
+    }
+}

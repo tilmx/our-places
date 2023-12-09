@@ -3,6 +3,7 @@ import localFont from 'next/font/local'
 import { GeistSans } from "geist/font/sans";
 import './globals.scss'
 import { siteDescription, siteTitle } from '@/data/site'
+import { Footer } from '@/components/footer';
 
 export const metadata: Metadata = {
   title: siteTitle,
@@ -20,6 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${clashDisplayFont.variable} ${GeistSans.variable}`}>
         {children}
+        <Footer />
       </body>
     </html>
   )
