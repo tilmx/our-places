@@ -15,6 +15,7 @@ const savedRecords: {
     name: string;
     type: string;
     address: string;
+    recommendedBy?: string;
     coordinates?: {
         lat: number;
         long: number;
@@ -30,6 +31,7 @@ base('Places').select({
             name: record.get('Name') as string,
             type: record.get('Type') as string,
             address: record.get('Address') as string,
+            recommendedBy: record.get('Recommended by') as string,
             coordinates: record.get('Coordinates') ? {
                 lat: Number((record.get('Coordinates') as string).split(', ')[0]),
                 long: Number((record.get('Coordinates') as string).split(', ')[1])

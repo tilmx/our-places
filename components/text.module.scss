@@ -3,6 +3,8 @@
     line-height: 1;
     font-family: var(--font-geist-sans);
     font-size: 48px;
+    font-weight: 500;
+    letter-spacing: -.03em;
 
     &.large {
         font-size: 84px;
@@ -10,5 +12,7 @@
 
     &.accent {
         font-family: var(--font-accent);
+        font-weight: unset;
+        letter-spacing: unset;
     }
 }

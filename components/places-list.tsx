@@ -10,6 +10,7 @@ export const PlacesList: FunctionComponent = () => {
                 <Card
                     key={place.id}
                     title={place.name}
+                    recommendedBy={place.recommendedBy}
                     type={place.type}
                 />
             )}

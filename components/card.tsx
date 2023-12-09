@@ -6,14 +6,26 @@ import { getPlaceIcon } from '@/utils';
 
 interface CardProps {
     title: string;
+    recommendedBy: string[];
     type: string;
 }
 
 export const Card: FunctionComponent<CardProps> = props => {
     return (
         <div className={styles.card}>
-            <Tag icon={getPlaceIcon(props.type)} label={props.type} />
+            <div className={styles.header}>
+                <Tag icon={getPlaceIcon(props.type)} label={props.type} />
+                <div className={styles.recommendedBy}>
+                    {props.recommendedBy.map((person, i) =>
+                        <div className={styles.person} key={i}>
+                            <Text>
+                                {person.charAt(0)}
+                            </Text>
+                        </div>
+                    )}
+                </div>
+            </div>
             <Text size={TextSize.Large} accent>{props.title}</Text>
-        </div>
+        </div >
     )
 }

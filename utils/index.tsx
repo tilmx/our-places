@@ -4,7 +4,7 @@ export const getPlaceIcon = (place: string) => {
     switch (place) {
         case "Bar":
             return <MartiniIcon />;
-        case "Cafe":
+        case "Café":
             return <CakeSliceIcon />;
         case "Restaurant":
             return <PizzaIcon />;
