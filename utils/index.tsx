@@ -10,3 +10,10 @@ export const getPlaceIcon = (place: string) => {
             return <PizzaIcon />;
     }
 }
+
+export const getPersonImage = (person: string) => {
+    switch (person) {
+        case "Tilman":
+            return "/assets/images/recommended-by/tilman.jpg";
+    }
+}

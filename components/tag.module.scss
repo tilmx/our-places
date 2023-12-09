@@ -1,3 +1,5 @@
+@import '@/app/breakpoints';
+
 .tag {
     background: var(--color-blue);
     color: var(--color-background);
@@ -7,9 +9,19 @@
     gap: var(--size-xs);
     align-items: center;
 
+    @media (max-width: $viewport-tablet) {
+        padding: var(--size-s) var(--size-m);
+        gap: var(--size-xxs);
+    }
+
     svg {
         display: block;
-        width: var(--size-xl);
-        height: var(--size-xl);
+        width: var(--size-l);
+        height: var(--size-l);
+
+        @media (max-width: $viewport-tablet) {
+            width: var(--size-m);
+            height: var(--size-m);
+        }
     }
 }

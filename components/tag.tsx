@@ -1,7 +1,6 @@
 import { FunctionComponent, ReactNode } from 'react'
 import { Text } from './text';
 import styles from './tag.module.scss'
-import { CakeSliceIcon } from 'lucide-react';
 
 interface TagProps {
     icon: ReactNode;

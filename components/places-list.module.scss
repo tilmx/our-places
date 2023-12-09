@@ -1,5 +1,11 @@
+@import '@/app/breakpoints';
+
 .cardList {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--size-m);
+
+    @media (max-width: $viewport-tablet) {
+        grid-template-columns: 1fr;
+    }
 }

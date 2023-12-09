@@ -2,7 +2,7 @@ import { FunctionComponent } from 'react'
 import { Text, TextSize } from './text';
 import styles from './card.module.scss'
 import { Tag } from './tag';
-import { getPlaceIcon } from '@/utils';
+import { getPersonImage, getPlaceIcon } from '@/utils';
 
 interface CardProps {
     title: string;
@@ -17,13 +17,15 @@ export const Card: FunctionComponent<CardProps> = props => {
                 <Tag icon={getPlaceIcon(props.type)} label={props.type} />
                 <div className={styles.recommendedBy}>
                     {props.recommendedBy.map((person, i) =>
-                        <div className={styles.person} key={i}>
-                            <Text>
-                                {person.charAt(0)}
-                            </Text>
+                        <div className={styles.person} style={{ backgroundImage: `url(${getPersonImage(person)})` }} key={i}>
+                            {!getPersonImage(person) &&
+                                <Text>
+                                    {person.charAt(0)}
+                                </Text>
+                            }
                         </div>
                     )}
-                </div>
+                </div >
             </div>
             <Text size={TextSize.Large} accent>{props.title}</Text>
         </div >
