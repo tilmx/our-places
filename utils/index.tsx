@@ -1,4 +1,4 @@
-import { CakeSliceIcon, MartiniIcon, PizzaIcon } from "lucide-react";
+import { CakeSliceIcon, MartiniIcon, SoupIcon } from "lucide-react";
 
 export const getPlaceIcon = (place: string) => {
     switch (place) {
@@ -7,7 +7,7 @@ export const getPlaceIcon = (place: string) => {
         case "Café":
             return <CakeSliceIcon />;
         case "Restaurant":
-            return <PizzaIcon />;
+            return <SoupIcon />;
     }
 }
 

@@ -8,6 +8,7 @@ interface TextProps {
 }
 
 export enum TextSize {
+    Small = "small",
     Regular = "regular",
     Large = "large"
 }

@@ -1,50 +1,56 @@
 .card {
-    padding: var(--size-l);
-    border-radius: calc(var(--size-xl) + var(--size-s));
+    padding: var(--size-m);
+    border-radius: var(--size-xxl);
     color: var(--color-blue);
+    align-items: center;
+    gap: var(--size-m);
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: var(--size-xxl);
     box-shadow: inset 0 0 0 6px var(--color-blue), 0 0 0 0 var(--color-blue);
     transition: box-shadow 0.1s;
     cursor: pointer;
-    word-break: break-word;
+    text-decoration: unset;
 
-    .header {
+    .type {
+        background: var(--color-blue);
+        color: var(--color-background);
+        padding: var(--size-s);
+        border-radius: 50%;
+
+        svg {
+            width: var(--size-xl);
+            height: var(--size-xl);
+            display: block;
+        }
+    }
+
+    .recommendedBy {
         display: flex;
-        gap: var(--size-xs);
-        align-items: stretch;
-        flex-wrap: wrap;
+        margin-left: auto;
+        margin-right: var(--size-xs);
 
-        .recommendedBy {
+        .person {
+            margin-left: calc(var(--size-xs) * -1);
+            background-size: cover;
+            position: relative;
             display: flex;
-            align-items: stretch;
-            width: auto;
+            align-items: center;
+            position: relative;
+            border-radius: 50%;
+            height: var(--size-xl);
+            width: var(--size-xl);
+            padding: var(--size-s);
+            justify-content: center;
 
-            .person {
-                width: auto;
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 100%;
                 height: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                position: relative;
                 border-radius: 50%;
-                aspect-ratio: 1 / 1;
-                margin-right: calc(var(--size-s) * -1);
-                background-size: cover;
-
-                &:after {
-                    content: '';
-                    display: block;
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    border-radius: 50%;
-                    background: var(--color-blue);
-                    opacity: 0.2;
-                    z-index: -1;
-                }
+                background: var(--color-blue);
+                opacity: 0.2;
+                z-index: -1;
             }
         }
     }

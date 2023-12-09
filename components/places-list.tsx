@@ -12,6 +12,7 @@ export const PlacesList: FunctionComponent = () => {
                     title={place.name}
                     recommendedBy={place.recommendedBy}
                     type={place.type}
+                    link={`https://www.google.com/maps/search/?api=1&query=${place.name} ${place.address}`}
                 />
             )}
         </div>
